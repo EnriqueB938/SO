@@ -30,7 +30,7 @@ struct param
 
 void funcionHiloCompra(void *parametro)
 {
-
+    
 }
 
 void funcionHiloSuministro(void *parametro)
@@ -56,7 +56,7 @@ int main(int argc, char **argv)
     srand(time(NULL));
 
     p.semaforo = &semaforo;
-    p.vector = vector;
+    p.vector = &vector;
     p.M = M;
 
     if(vector == NULL)
@@ -90,7 +90,7 @@ int main(int argc, char **argv)
         }
     }
 
-        for (size_t i = 0; i < M; i++)
+    for (size_t i = 0; i < M; i++)
     {
         if (pthread_create(&proveedores[i], NULL, (void *)funcionHiloSuministro, (void *)&p) != 0)
         {

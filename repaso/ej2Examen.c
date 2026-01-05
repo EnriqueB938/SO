@@ -1,4 +1,3 @@
-
 //Saber obligatoriamente sobre MP saber contar lineas de un fichero, saber si un numero es primo y el factorial.
 
 #include <stdlib.h>

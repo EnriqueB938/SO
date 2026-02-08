@@ -1,3 +1,20 @@
+/*
+Una tienda que vende camisetas guarda en una base de datos (buffer) las cantidades de camisetas
+que tiene según el modelo. Por ejemplo, un buffer de camisetas[5] indica que existen 5 modelos de camisetas
+y cada elemento de este buffer guarda las cantidades iniciales de cada una de ellas. 
+Implementar un programa que genere N clientes (pedido por linea de argumentos) y M proveedores
+(la misma cantidad de proveedores que modelos de camiseta, también pedido por linea de argumentos).
+Para simular una compra, cada hilo Cliente debe generar un valor aleatorio para el modelo de camiseta que quiere comprar
+y otro para la cantidad a comprar. Esta cantidad debe decrementar el stock de la camiseta en cuestión.
+Para simular un suministro, cada Proveedor debe hacer lo mismo que el Cliente pero en este caso,
+incrementando el stock de la camiseta en cuestión. Utilice semáforos binarios para resolver este problema
+de concurrencia imprimiendo el buffer antes de generar los hilos y al final del programa para comprobar
+que se ha ejecutado correctamente. En cuanto al numero de camisetas a comprar o suministrar,
+por ejemplo pueden ser valores aleatorios entre [1-10]. Para rellenar el vector inicial de stock de camisetas
+podría generar números aleatorios entre [1-100]. Si se diera el caso de que algún cliente quiere comprar
+más camisetas de las disponibles solo se le proporcionarán las que queden.
+*/
+
 #include <stdio.h>
 #include <pthread.h>
 #include <stdlib.h>

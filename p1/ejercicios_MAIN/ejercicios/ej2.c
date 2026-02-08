@@ -1,5 +1,5 @@
 /*
-        a.out
+        Padre
           |
           H1
           |
@@ -85,7 +85,7 @@ int main(int argc, char **argv)
         case -1:
             printf("Error en el fork().\n");
             exit(EXIT_FAILURE);
-        case 0:
+        case 0: 
             printf("[NIETOS]: soy el proceso con pid %ld y el pid de mi padre es %ld\n", (long int)getpid(), (long int)getppid());
             espera();
             exit(EXIT_SUCCESS);

@@ -38,12 +38,12 @@ void espera()
         {
             printf("Proceso padre %d, hijo con PID %ld finalizado, status = %d\n", getpid(), (long int)pid_hijo, WEXITSTATUS(status));
         }
-        else if (WIFSIGNALED(status)) // Para seniales como las de finalizar o matar
+        else if (WIFSIGNALED(status)) 
         {
             printf("Proceso padre %d, hijo con PID %ld finalizado al recibir la señal %d\n", getpid(), (long int)pid_hijo, WTERMSIG(status));
         }
     }
-    if (pid_hijo == (pid_t)-1 && errno == ECHILD) // Entra cuando vuelve al while y no hay más hijos que esperar
+    if (pid_hijo == (pid_t)-1 && errno == ECHILD) 
     {
         printf("Proceso padre %d, no hay mas hijos que esperar. Valor de errno = %d, definido como: %s\n", getpid(), errno, strerror(errno));
     }

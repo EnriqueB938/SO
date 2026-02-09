@@ -32,7 +32,7 @@ void funcionManejadora(int signal)
 
 void espera()
 {
-        while ((pid_hijo = waitpid(-1, &status, 0)) > 0)
+    while ((pid_hijo = waitpid(-1, &status, 0)) > 0)
     {
         if (WIFEXITED(status))
         {

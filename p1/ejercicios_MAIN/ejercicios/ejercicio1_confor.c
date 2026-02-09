@@ -15,7 +15,6 @@
 
 void espera()
 {
-
     int status;
     pid_t pid_hijo;
     while ((pid_hijo = waitpid(-1, &status, 0)) > 0)
